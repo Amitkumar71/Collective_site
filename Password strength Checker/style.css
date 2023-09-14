@@ -17,7 +17,7 @@ body {
 .container {
   position: relative;
   width: 400px;
-  background-color:rgb(244, 230, 176);
+  background-color:darkcyan;
   padding: 30px;
   border-radius: 10px;
   display: flex;
@@ -29,7 +29,7 @@ body {
   gap: 10px;
 }
 .container h2 {
-  color: #666;
+  color:black;
   font-weight: 500;
 }
 
@@ -124,6 +124,7 @@ body {
   border: 6px solid #222;
   cursor: pointer;
   justify-content: center;
+  border-radius: 50%;
   align-items: center;
   display: flex;
 }
@@ -137,4 +138,34 @@ body {
 
 .show.hide::before {
   content: "\1F642";
+}
+
+.footer {
+  background-color:rgb(9, 191, 191);
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.heart {
+  color: #ff5757;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 14px;
+  color:black;
+  font-weight: bold;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: blue;
 }

@@ -35,10 +35,10 @@ function Strength(password) {
       feedback.textContent = "";
     } else {
       let strength = Strength(password);
-      if (strength <= 2) {
+      if (strength <= 3) {
         container.classList.add("weak");
         feedback.textContent = "Weak password";
-      } else if (strength <= 3) {
+      } else if (strength <= 4) {
         container.classList.add("moderate");
         feedback.textContent = "Moderate password";
       } else {

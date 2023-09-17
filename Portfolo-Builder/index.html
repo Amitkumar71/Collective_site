@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio Builder</h1>
+    </header>
+    <main>
+        <section id="personal-info">
+            <h2>Personal Information</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4"></textarea><br>
+            </form>
+        </section>
+        <section id="portfolio-content">
+            <h2>Portfolio Content</h2>
+            <form>
+                <label for="project-title">Project Title:</label>
+                <input type="text" id="project-title" name="project-title" required><br>
+                <label for="project-description">Project Description:</label>
+                <textarea id="project-description" name="project-description" rows="4" required></textarea><br>
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills"><br>
+                <button id="add-project">Add Project</button>
+            </form>
+            <div id="projects">
+                <!-- Display added projects here -->
+            </div>
+        </section>
+        <section id="preview-portfolio">
+            <h2>Preview</h2>
+            <!-- Display a live preview of the portfolio here -->
+        </section>
+    </main>
+    <footer>
+        <button id="export-button">Export Portfolio</button>
+    </footer>
+    <script>
+        // JavaScript for handling user interactions and building the portfolio
+
+        // DOM elements
+        const personalInfoForm = document.querySelector('#personal-info form');
+        const portfolioContentForm = document.querySelector('#portfolio-content form');
+        const projectsContainer = document.getElementById('projects');
+        const exportButton = document.getElementById('export-button');
+
+        // Event listeners
+        personalInfoForm.addEventListener('submit', handlePersonalInfoSubmit);
+        portfolioContentForm.addEventListener('submit', handlePortfolioContentSubmit);
+        exportButton.addEventListener('click', exportPortfolio);
+
+        // Functions to handle form submissions and build the portfolio
+        function handlePersonalInfoSubmit(event) {
+            event.preventDefault();
+            // Extract and save personal information (e.g., name, email, bio)
+            // Update the live preview
+            updatePreview();
+        }
+
+        function handlePortfolioContentSubmit(event) {
+            event.preventDefault();
+            // Extract and save portfolio content (e.g., project title, description, skills)
+            // Add the project to the list of projects
+            addProject();
+            // Update the live preview
+            updatePreview();
+        }
+
+        function addProject() {
+            // Create a new project element and add it to the projectsContainer
+            const projectTitle = document.getElementById('project-title').value;
+            const projectDescription = document.getElementById('project-description').value;
+            const skills = document.getElementById('skills').value;
+
+            const projectElement = document.createElement('div');
+            projectElement.innerHTML = `
+                <h3>${projectTitle}</h3>
+                <p>${projectDescription}</p>
+                <p><strong>Skills:</strong> ${skills}</p>
+            `;
+
+            projectsContainer.appendChild(projectElement);
+
+            // Clear the input fields
+            document.getElementById('project-title').value = '';
+            document.getElementById('project-description').value = '';
+            document.getElementById('skills').value = '';
+        }
+
+        function updatePreview() {
+            // Generate and display a live preview of the portfolio
+            // Use the information collected from personalInfoForm and projectsContainer
+            // Update the preview-portfolio section
+        }
+
+        function exportPortfolio() {
+            // Generate a downloadable HTML/CSS file that represents the portfolio
+            // Include the saved personal information and portfolio content
+            // Provide the user with a download link or open a new window for download
+        }
+        </script>
+    </body>
+</html>

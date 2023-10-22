@@ -1,0 +1,65 @@
+body{
+    background-color: #EFEDE6;
+    padding: 0;
+    margin: 0;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.heading h1{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 24px;
+    color: rgb(0, 0, 0)
+}
+.welcome{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1rem, 10vw, 3rem);
+    line-height: 1em;
+    word-break: break-word;
+    font-weight: bolder;
+}
+.font-styrene-display {
+    font-family: var(--font-styrene-a),ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.input-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000000;
+    padding: 10px;
+    color:#EFEDE6;
+    width: 40%;
+    border-radius: 20px;
+    background-color: white;
+}
+input:focus{
+    outline: none;
+}
+.input-area input{
+    width: 70%;
+    padding: 10px;
+    border-radius: 15px;
+}
+.input-area input, .input-area button{
+    border: none;
+    font-size: 80%;
+}
+.input-area .btn-1{
+    background-color: #EFEDE6;
+    border-radius: 12px;
+    padding: 10px;
+}
+.input-area .btn-2{
+    background-color: #5645A1;
+    border-radius: 12px;
+    color: white;
+    padding: 10px;
+}
